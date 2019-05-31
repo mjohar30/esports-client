@@ -1,0 +1,9 @@
+.imageTeam{
+    object-fit: cover;
+    width:100px;
+    height:100px;
+    border-radius:150px;
+};
+.socialN{
+    justify-content: center
+}
