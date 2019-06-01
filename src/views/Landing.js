@@ -47,8 +47,8 @@ class Landing extends Component {
           </Modal>
           </div>
         </p>
-        <Button color="primary" onClick={() => this.setState({ showModal2:true, showModal1:false});} >Inicia sesión</Button>
-          <Modal show={this.state.showModal2} onHide={() => this.setState({ showModal2:false});}>
+        <Button color="primary" onClick={() => this.setState({ showModal2:true, showModal1:false})} >Inicia sesión</Button>
+          <Modal show={this.state.showModal2} onHide={() => this.setState({ showModal2:false})}>
             <ModalHeader>Iniciar sesión </ModalHeader>
             <ModalBody>
               Iniciar sesión en la plataforma como: 
