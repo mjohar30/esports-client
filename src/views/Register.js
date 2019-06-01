@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Row } from 'reactstrap';
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import axios from 'axios'
 
@@ -59,7 +58,6 @@ class Register extends Component {
   render() {
         return (
           <div>
-            <Navbar></Navbar>
             <br/>
             <br/>
             <br/>

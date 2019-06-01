@@ -12,8 +12,10 @@
     background-color: #464646;
     font-family: 'Roboto', sans-serif;
 }
-.overwatch{
-  text-align: center;
-    width: 100px;
-    height: 100px;
+.imagesCard{
+  display:inline;
+  margin-left:100px;
+  margin-right: 100px;
+  width: 64px;
+  height: 64px;
 }

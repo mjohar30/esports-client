@@ -1,27 +1,16 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar'
 import Card from '../components/Cards'
 import {Row, Col, Jumbotron, Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap'
 import './Landing.css'
 import { FaUser, FaUsers, FaBriefcase} from "react-icons/fa";
 import overwatch from '../images/overwatch.png'
-import Footer from '../components/Footer'
+import cod from '../images/cod.png'
+import counter from '../images/counter.png'
+import fortnite from '../images/fortnite.jpg'
+import lol from '../images/lol.png'
 
 class Landing extends Component {
 
-  // state = {
-  //   isModalOpen: false,
-  //   modalTitle: "Registrate en la plataforma como:",
-  //   modalBody: ""
-  //  };
-
-  //  toggle = (title, body) => {
-  //   this.setState({
-  //     isModalOpen: !this.state.modal,
-  //     modalTitle: title,
-  //     modalBody: body
-  //   });
-  //  };
   constructor(props) {
     super(props);
     
@@ -52,7 +41,6 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
         <Jumbotron className="jumbotron text-white">
         <h1 className="display-3 "> <strong>El futuro de los eSports es aquí </strong></h1>
         <p className="lead">Siempre has querido ser un jugador profesional, ¿Pero no sabes donde postularte?</p>
@@ -101,11 +89,16 @@ class Landing extends Component {
         <br></br>
         <Row>
           <Col>
-            <Card icon2={<img className="overwatch" src={overwatch} title="Overwatch"></img>}  title="¡No te preocupes!" 
-                button="Próximamente" text="Nosotros obtendremos tus estadísticas de los siguientes juegos" ><img src={overwatch} title="Overwatch"></img> </Card>
+            <Card title="¡No te preocupes!" button="Próximamente" text="Nosotros obtendremos tus estadísticas de los siguientes juegos"
+            icon2={<img className="imagesCard" src={overwatch} title="Overwatch"></img>}
+            icon3={<img className="imagesCard" src={cod} title="Overwatch"></img>}
+            icon4={<img className="imagesCard" src={fortnite} title="Overwatch"></img>}
+            icon5={<img className="imagesCard" src={lol} title="Overwatch"></img>}
+            icon6={<img className="imagesCard" src={counter} title="Overwatch"></img>} >
+                  
+            </Card>
           </Col>
         </Row>
-        <Footer/>
       </div>
     );
   }

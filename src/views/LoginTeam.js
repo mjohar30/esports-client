@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import './Login.css'
-import Navbar from '../components/Navbar'
 
 class App extends Component {
   render() {
     return (
         <div>
-        <Navbar/>
         <br/>
         <br/>
         <br/>
