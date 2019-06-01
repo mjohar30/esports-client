@@ -26,7 +26,7 @@ import './Navbar.css'
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink className="text-white" href="/">Home</NavLink>
+                  <NavLink className="text-white" href="#/">Home</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="text-white" href="#/profile">Profile</NavLink>

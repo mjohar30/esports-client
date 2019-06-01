@@ -12,7 +12,8 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      modal2: false
     };
 
     this.toggle = this.toggle.bind(this);
@@ -20,7 +21,8 @@ class Landing extends Component {
 
   toggle() {
     this.setState(prevState => ({
-      modal: !prevState.modal
+      modal: !prevState.modal,
+      modal2: !prevState.modal2
     }));
   }
 
@@ -42,21 +44,21 @@ class Landing extends Component {
               Registrarse en la plataforma como: 
             </ModalBody>
             <ModalFooter className="justify-content-center">
-              <Button color="primary" href="/register">Jugador de esports</Button>{' '}
-              <Button color="primary" href="/registerTeam">Equipo de esports</Button>
+              <Button color="primary" href="#/register">Jugador de esports</Button>{' '}
+              <Button color="primary" href="#/registerTeam">Equipo de esports</Button>
             </ModalFooter>
           </Modal>
           </div>
         </p>
         <Button color="primary" onClick={this.toggle}>Inicia sesión</Button>
-          <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <Modal isOpen={this.state.modal2} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Iniciar sesión </ModalHeader>
             <ModalBody>
               Iniciar sesión en la plataforma como: 
             </ModalBody>
             <ModalFooter className="justify-content-center">
-              <Button color="primary" href="/profile">Jugador de esports</Button>{' '}
-              <Button color="primary" href="/profileTeam">Equipo de esports</Button>
+              <Button color="primary" href="#/profile">Jugador de esports</Button>{' '}
+              <Button color="primary" href="#/profileTeam">Equipo de esports</Button>
             </ModalFooter>
           </Modal>
       </Jumbotron>
