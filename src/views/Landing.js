@@ -45,7 +45,7 @@ class Landing extends Component {
   }
   showModal(modal) {
     this.setState({
-      [modal]: true
+      [modal]: false
     });
     console.log(this.state);
   }
@@ -97,7 +97,6 @@ class Landing extends Component {
             <Card icon={<FaBriefcase/>} title="Ofertas de empleo" text="Ya sea para un torneo casual o profesional, podrás encontrar 
             los mejores aliados" button="Próximamente"></Card>
           </Col>
-            <Card title="jfjfjf"></Card>
         </Row>
         <br></br>
         <Row>
