@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar'
 import {Row, Col} from 'reactstrap'
 // import imageProfile from 'https://pbs.twimg.com/profile_images/1093776339142930436/-3IgA4Uk_400x400.jpg'
 import './Description.css'

@@ -21,7 +21,7 @@ import './Navbar.css'
       return (
         <div className="Navbar">
           <Navbar color="primary" light expand="md">
-            <NavbarBrand className="text-white" href="/">E-Sports</NavbarBrand>
+            <NavbarBrand className="text-white" href="#/">E-Sports</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>

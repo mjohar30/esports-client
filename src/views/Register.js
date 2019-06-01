@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Row } from 'reactstrap';
-import Footer from '../components/Footer'
+import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 import axios from 'axios'
 
 class Register extends Component {
@@ -87,13 +86,13 @@ class Register extends Component {
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
-                <Label for="email">Correo electrómico</Label>
+                <Label for="email">Correo electrónico</Label>
                 <Input name="regisemail" onChange={this.handleChange} type="email" id="email" placeholder="juan@esports.com" />
                 </Col>
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
-                <Label for="password">Password</Label>
+                <Label for="password">Contraseña</Label>
                 <Input name="regispass" onChange={this.handleChange} type="password" id="password" placeholder="****" />
                 </Col>
               </FormGroup>
@@ -102,6 +101,9 @@ class Register extends Component {
                 <Label for="seleccionJuego">Seleccionar juego</Label>
                   <Input name="regisgame" onChange={this.handleChange} type="select" id="seleccionJuego">
                     <option>Overwatch</option>
+                    <option>Call of Duty</option>
+                    <option>Fortnite</option>
+                    <option>League of Legends</option>
                   </Input>
                 </Col>
               </FormGroup>
@@ -109,7 +111,9 @@ class Register extends Component {
                 <Col sm="5">
                 <Label for="exampleSelect">Plataforma en la que juega</Label>
                   <Input name="regisplatform" onChange={this.handleChange} type="select" id="exampleSelect">
-                    <option>Ciudad de México</option>
+                    <option>Xbox One</option>
+                    <option>Play Station 4</option>
+                    <option>PC</option>
                   </Input>
                 <Label for="gamertag">Gamertag de esa plataforma</Label>
                 <Input name="regisgamertag" onChange={this.handleChange} type="text"x id="gamertag" placeholder="gamertag">

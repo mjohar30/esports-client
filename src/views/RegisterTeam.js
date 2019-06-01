@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Row } from 'reactstrap';
-import Footer from '../components/Footer'
+import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 import axios from 'axios'
 
 class RegisterTeam extends Component {
@@ -65,35 +64,27 @@ class RegisterTeam extends Component {
             <Form onSubmit= {this.handleSubmit}>
               <FormGroup>
                 <Col sm="5">
-                <Label for="name">Nombre del jugador</Label>
-                <Input name="regisname" onChange={this.handleChange} xs="5" type="text" id="name" placeholder="Nombre del jugador" />
+                <Label for="name">Nombre del equipo</Label>
+                <Input name="regisname" onChange={this.handleChange} xs="5" type="text" id="name" placeholder="Nombre del equipo" />
                 </Col>
               </FormGroup>
               <FormGroup>
-                
                 <Col sm="5">
                 <Label for="paisOrigen">País de origen</Label>
                   <Input name="regiscountry" onChange={this.handleChange} type="select" id="paisOrigen">
                     <option>México</option>
                   </Input>
                 </Col>
-                <Col sm="5">
-                <Label for="estado">Estado</Label>
-                  <Input name="regisstate" onChange={this.handleChange} type="select" id="estado">
-                    <option>Ciudad de México</option>
-                  </Input>
-                </Col>
-                
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
-                <Label for="email">Correo electrómico</Label>
+                <Label for="email">Correo electrónico</Label>
                 <Input name="regisemail" onChange={this.handleChange} type="email" id="email" placeholder="juan@esports.com" />
                 </Col>
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
-                <Label for="password">Password</Label>
+                <Label for="password">Contraseña</Label>
                 <Input name="regispass" onChange={this.handleChange} type="password" id="password" placeholder="****" />
                 </Col>
               </FormGroup>
@@ -111,15 +102,11 @@ class RegisterTeam extends Component {
                   <Input name="regisplatform" onChange={this.handleChange} type="select" id="exampleSelect">
                     <option>Ciudad de México</option>
                   </Input>
-                <Label for="gamertag">Gamertag de esa plataforma</Label>
-                <Input name="regisgamertag" onChange={this.handleChange} type="text"x id="gamertag" placeholder="gamertag">
-                </Input>
                 </Col>
               </FormGroup>
               <Button type="submit">Submit</Button>
             </Form>
             </div>
-            <Footer/>
           </div>
         );
     }
