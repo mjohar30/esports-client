@@ -6,6 +6,7 @@ import ProfileTeam from './views/ProfileTeam'
 import Register from './views/Register'
 import RegisterTeam from './views/RegisterTeam'
 import Login from './views/Login'
+import LoginTeam from './views/LoginTeam'
 
 const Routes = () => {
     return (
@@ -16,6 +17,8 @@ const Routes = () => {
             <Route path ="/register" exact component={Register} />
             <Route path ="/registerTeam" exact component={RegisterTeam} />
             <Route path ="/login" exact component={Login} />
+            <Route path ="/loginTeam" exact component={LoginTeam} />
+
         </Switch>
     )
 }

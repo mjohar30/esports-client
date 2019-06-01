@@ -4,7 +4,7 @@ import Card from '../components/Cards'
 import {Row, Col, Jumbotron, Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap'
 import './Landing.css'
 import { FaUser, FaUsers, FaBriefcase} from "react-icons/fa";
-import overwatch from '../overwatch.png'
+import overwatch from '../images/overwatch.png'
 import Footer from '../components/Footer'
 
 class Landing extends Component {
@@ -80,8 +80,8 @@ class Landing extends Component {
               Iniciar sesión en la plataforma como: 
             </ModalBody>
             <ModalFooter className="justify-content-center">
-              <Button color="primary" href="#/profile">Jugador de esports</Button>{' '}
-              <Button color="primary" href="#/profileTeam">Equipo de esports</Button>
+              <Button color="primary" href="#/login">Jugador de esports</Button>{' '}
+              <Button color="primary" href="#/loginTeam">Equipo de esports</Button>
             </ModalFooter>
           </Modal>
       </Jumbotron>

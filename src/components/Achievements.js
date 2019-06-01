@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Media} from 'reactstrap'
-import trophy from '../trofeo.png'
+import trophy from '../images/trofeo.png'
 import './Achievements.css'
 
 
