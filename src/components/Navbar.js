@@ -29,7 +29,7 @@ import './Navbar.css'
                   <NavLink className="text-white" href="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="text-white" href="esports-client/#/profile">Profile</NavLink>
+                  <NavLink className="text-white" href="#/profile">Profile</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
