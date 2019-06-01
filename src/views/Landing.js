@@ -45,7 +45,7 @@ class Landing extends Component {
   }
   showModal(modal) {
     this.setState({
-      [modal]: false
+      [modal]: true
     });
     console.log(this.state);
   }
