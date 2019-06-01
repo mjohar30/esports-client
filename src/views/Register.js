@@ -4,8 +4,6 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import axios from 'axios'
 
-const baseURL = `${process.env.REACT_APP_BASE_URL}/users/register`
-
 class Register extends Component {
 
   state = {
@@ -22,16 +20,16 @@ class Register extends Component {
   }
  
   handleSubmit= event => {
-      const doctor = event.currentTarget();
+      const user = event.currentTarget();
       
-      if (doctor.checkValidity() === false) {
+      if (user.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
       }
       
       this.setState({ validated: true });
       // event.preventDefault();
-      const regisDoctor = {
+      const regisUser = {
         name: this.state.regisname,
         country: this.state.regiscountry,
         state: this.state.regisstate,
@@ -44,13 +42,13 @@ class Register extends Component {
       
       
       
-      console.log("esto enviaste:", regisDoctor)
+      console.log("esto enviaste:", regisUser)
       axios({
         method: 'post',
-        baseURL,
+        baseURL: `${process.env.REACT_APP_BASE_URL}/users/register`,
         headers: {'Content-Type': 'application/json'},
         withCredentials: true,
-        data: regisDoctor
+        data: regisUser
       })
       .then(res => {
         console.log(res.data)
@@ -66,7 +64,7 @@ class Register extends Component {
             <br/>
             <br/>
             <div className="form">
-            <Form>
+            <Form onSubmit= {this.handleSubmit}>
               <FormGroup>
                 <Col sm="5">
                 <Label for="name">Nombre del jugador</Label>
@@ -120,7 +118,7 @@ class Register extends Component {
                 </Input>
                 </Col>
               </FormGroup>
-              <Button>Submit</Button>
+              <Button type="submit">Submit</Button>
             </Form>
             </div>
             <Footer/>
