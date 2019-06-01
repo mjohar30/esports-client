@@ -27,7 +27,7 @@ class Landing extends Component {
     
     this.state = {
       dd1: false,
-      modal1: true,
+      modal1: false,
       modal2: false
     };
     this.dropdownToggle = this.dropdownToggle.bind(this);
@@ -88,7 +88,7 @@ class Landing extends Component {
         <Row>
           <Col sm="4">
             <Card icon={<FaUser/>}  title="Los mejores jugadores" text="Revisa sus estadísticas, su información personal 
-            y su disponiblidad" button="Checar" link="/profile"> </Card>
+            y su disponiblidad" button="Checar" href="#/profile"> </Card>
           </Col>
           <Col sm="4">
             <Card icon={<FaUsers/>} title="Los mejores equipos" text="Sus logros y sus participantes estarán a la vista de todos." button="Checar"></Card>

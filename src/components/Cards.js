@@ -15,7 +15,7 @@ class Cards extends Component {
           <CardTitle>{this.props.title}</CardTitle>
           <CardSubtitle>{this.props.subtitle}</CardSubtitle>
           <CardText>{this.props.text}</CardText>
-          <Button link={this.props.link}>{this.props.button}</Button>
+          <Button href={this.props.link}>{this.props.button}</Button>
         </CardBody>
         <div className="iconlogo">
           {this.props.icon2}
