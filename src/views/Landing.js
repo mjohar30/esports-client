@@ -9,22 +9,19 @@ import Footer from '../components/Footer'
 
 class Landing extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      modal: false,
-      modal2: false
-    };
+  state = {
+    isModalOpen: false,
+    modalTitle: "Registrate en la plataforma como:",
+    modalBody: ""
+   };
 
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal,
-      modal2: !prevState.modal2
-    }));
-  }
+   toggle = (title, body) => {
+    this.setState({
+      isModalOpen: !this.state.modal,
+      modalTitle: title,
+      modalBody: body
+    });
+   };
 
   render() {
     return (
@@ -38,8 +35,8 @@ class Landing extends Component {
         <p>Este es el lugar indicado para ti</p>
         <p className="lead">
           <div><Button color="primary" onClick={this.toggle}>Registrate ahora mismo</Button>
-          <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Registrarse</ModalHeader>
+          <Modal isOpen={this.props.isModalOpen} toggle={this.props.toggle} className={this.props.className}>
+            <ModalHeader toggle={this.props.toggle}>{this.props.modalBody}</ModalHeader>
             <ModalBody>
               Registrarse en la plataforma como: 
             </ModalBody>
