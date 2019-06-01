@@ -10,7 +10,7 @@ import Login from './views/Login'
 const Routes = () => {
     return (
         <Switch>
-            <Route path ="/" exact component={Register} />
+            <Route path ="" exact component={Register} />
             <Route path ="esports-client/#/profile" exact component={Profile} />
             <Route path ="esports-client/#//profileTeam" exact component={ProfileTeam} />
             <Route path ="esports-client/#//register" exact component={Register} />
