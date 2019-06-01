@@ -7,6 +7,7 @@ import Register from './views/Register'
 import RegisterTeam from './views/RegisterTeam'
 import Login from './views/Login'
 import LoginTeam from './views/LoginTeam'
+import ERROR from './views/Error'
 
 const Routes = () => {
     return (
@@ -18,7 +19,7 @@ const Routes = () => {
             <Route path ="/registerTeam" exact component={RegisterTeam} />
             <Route path ="/login" exact component={Login} />
             <Route path ="/loginTeam" exact component={LoginTeam} />
-
+            <Route component={ERROR} />
         </Switch>
     )
 }

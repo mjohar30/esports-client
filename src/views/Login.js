@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Container, Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import './Login.css'
 
-class App extends Component {
+class Login extends Component {
 
     // state = {
     //     bigData: null,
@@ -46,7 +46,7 @@ class App extends Component {
 
   render() {
     return (
-        <div>
+        <div className="back">
         <br/>
         <br/>
         <br/>
@@ -83,7 +83,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Login;
 
     // axios({
     //     method: 'post',
