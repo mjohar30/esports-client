@@ -9,19 +9,19 @@ import Footer from '../components/Footer'
 
 class Landing extends Component {
 
-  state = {
-    isModalOpen: false,
-    modalTitle: "Registrate en la plataforma como:",
-    modalBody: ""
-   };
+  // state = {
+  //   isModalOpen: false,
+  //   modalTitle: "Registrate en la plataforma como:",
+  //   modalBody: ""
+  //  };
 
-   toggle = (title, body) => {
-    this.setState({
-      isModalOpen: !this.state.modal,
-      modalTitle: title,
-      modalBody: body
-    });
-   };
+  //  toggle = (title, body) => {
+  //   this.setState({
+  //     isModalOpen: !this.state.modal,
+  //     modalTitle: title,
+  //     modalBody: body
+  //   });
+  //  };
 
   render() {
     return (
@@ -34,9 +34,9 @@ class Landing extends Component {
         <hr className="my-2" />
         <p>Este es el lugar indicado para ti</p>
         <p className="lead">
-          <div><Button color="primary" onClick={this.toggle}>Registrate ahora mismo</Button>
-          <Modal isOpen={this.props.isModalOpen} toggle={this.props.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.props.toggle}>{this.props.modalBody}</ModalHeader>
+          <div><Button color="primary" onClick={() => this.setState({ showModal1:true, showModal2:false})}>Registrate ahora mismo</Button>
+          <Modal show={this.state.showModal1} onHide={() => this.setState({ showModal1:false})}>
+            <ModalHeader>Registro</ModalHeader>
             <ModalBody>
               Registrarse en la plataforma como: 
             </ModalBody>
@@ -47,9 +47,9 @@ class Landing extends Component {
           </Modal>
           </div>
         </p>
-        <Button color="primary" onClick={this.toggle}>Inicia sesión</Button>
-          <Modal isOpen={this.state.modal2} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Iniciar sesión </ModalHeader>
+        <Button color="primary" onClick={() => this.setState({ showModal2:true, showModal1:false});} >Inicia sesión</Button>
+          <Modal show={this.state.showModal2} onHide={() => this.setState({ showModal2:false});}>
+            <ModalHeader>Iniciar sesión </ModalHeader>
             <ModalBody>
               Iniciar sesión en la plataforma como: 
             </ModalBody>
