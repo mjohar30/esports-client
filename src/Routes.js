@@ -11,11 +11,11 @@ const Routes = () => {
     return (
         <Switch>
             <Route exact path ="/" exact component={Register} />
-            <Route exact path ="/#/profile" component={Profile} />
+            <Route exact path ="/profile" component={Profile} />
             <Route path ="/profileTeam" exact component={ProfileTeam} />
-            <Route path ="//register" exact component={Register} />
-            <Route path ="#/registerTeam" exact component={RegisterTeam} />
-            <Route path ="#//login" exact component={Login} />
+            <Route path ="/register" exact component={Register} />
+            <Route path ="/registerTeam" exact component={RegisterTeam} />
+            <Route path ="/login" exact component={Login} />
         </Switch>
     )
 }
