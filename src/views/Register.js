@@ -2,9 +2,63 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Row } from 'reactstrap';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import axios from 'axios'
+
+const baseURL = `${process.env.REACT_APP_BASE_URL}/users/register`
 
 class Register extends Component {
-    render() {
+
+  state = {
+    bigData: null,
+  }
+
+
+  handleChange = event => {
+    console.log(this.state)
+    this.setState({
+      ...this.state,
+      [event.target.name]: event.target.value
+    });
+  }
+ 
+  handleSubmit= event => {
+      const doctor = event.currentTarget();
+      
+      if (doctor.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+      
+      this.setState({ validated: true });
+      // event.preventDefault();
+      const regisDoctor = {
+        name: this.state.regisname,
+        country: this.state.regiscountry,
+        state: this.state.regisstate,
+        email: this.state.regisemail,
+        password: this.state.regispass,
+        game: this.state.regisgame,
+        platform: this.state.regisplatform,
+        gamertag: this.state.regisgamertag
+      }
+      
+      
+      
+      console.log("esto enviaste:", regisDoctor)
+      axios({
+        method: 'post',
+        baseURL,
+        headers: {'Content-Type': 'application/json'},
+        withCredentials: true,
+        data: regisDoctor
+      })
+      .then(res => {
+        console.log(res.data)
+        return res.data
+      })
+    }
+  
+  render() {
         return (
           <div>
             <Navbar></Navbar>
@@ -16,20 +70,20 @@ class Register extends Component {
               <FormGroup>
                 <Col sm="5">
                 <Label for="name">Nombre del jugador</Label>
-                <Input xs="5" type="text" name="name" id="name" placeholder="Nombre del jugador" />
+                <Input name="regisname" onChange={this.handleChange} xs="5" type="text" id="name" placeholder="Nombre del jugador" />
                 </Col>
               </FormGroup>
               <FormGroup>
                 
                 <Col sm="5">
                 <Label for="paisOrigen">País de origen</Label>
-                  <Input type="select" name="select" id="paisOrigen">
+                  <Input name="regiscountry" onChange={this.handleChange} type="select" id="paisOrigen">
                     <option>México</option>
                   </Input>
                 </Col>
                 <Col sm="5">
-                <Label for="exampleSelect">Estado</Label>
-                  <Input type="select" name="select" id="exampleSelect">
+                <Label for="estado">Estado</Label>
+                  <Input name="regisstate" onChange={this.handleChange} type="select" id="estado">
                     <option>Ciudad de México</option>
                   </Input>
                 </Col>
@@ -38,19 +92,19 @@ class Register extends Component {
               <FormGroup>
                 <Col sm="5">
                 <Label for="email">Correo electrómico</Label>
-                <Input type="email" name="email" id="email" placeholder="juan@esports.com" />
+                <Input name="regisemail" onChange={this.handleChange} type="email" id="email" placeholder="juan@esports.com" />
                 </Col>
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
                 <Label for="password">Password</Label>
-                <Input type="password" name="password" id="password" placeholder="****" />
+                <Input name="regispass" onChange={this.handleChange} type="password" id="password" placeholder="****" />
                 </Col>
               </FormGroup>
               <FormGroup>
                 <Col sm="5">
                 <Label for="seleccionJuego">Seleccionar juego</Label>
-                  <Input type="select" name="select" id="seleccionJuego">
+                  <Input name="regisgame" onChange={this.handleChange} type="select" id="seleccionJuego">
                     <option>Overwatch</option>
                   </Input>
                 </Col>
@@ -58,11 +112,11 @@ class Register extends Component {
               <FormGroup>
                 <Col sm="5">
                 <Label for="exampleSelect">Plataforma en la que juega</Label>
-                  <Input type="select" name="select" id="exampleSelect">
+                  <Input name="regisplatform" onChange={this.handleChange} type="select" id="exampleSelect">
                     <option>Ciudad de México</option>
                   </Input>
                 <Label for="gamertag">Gamertag de esa plataforma</Label>
-                <Input type="text" name="gamertag" id="gamertag" placeholder="gamertag">
+                <Input name="regisgamertag" onChange={this.handleChange} type="text"x id="gamertag" placeholder="gamertag">
                 </Input>
                 </Col>
               </FormGroup>

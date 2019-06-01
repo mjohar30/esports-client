@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import {Media} from 'reactstrap'
+import trophy from '../trofeo.png'
+import './Achievements.css'
+
 
 class Achievements extends Component {
     render() {
         return (
             <div>
                 <Media>
-                    <Media left href="#">
-                        <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+                    <Media left>
+                        <img className="trophy" src={trophy} alt=""/>
                     </Media>
                     <Media body>
                         <Media heading>

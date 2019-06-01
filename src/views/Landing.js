@@ -35,7 +35,7 @@ class Landing extends Component {
         <hr className="my-2" />
         <p>Este es el lugar indicado para ti</p>
         <p className="lead">
-          <Button color="primary" onClick={this.toggle}>Registrate ahora mismo</Button>
+          <div><Button color="primary" onClick={this.toggle}>Registrate ahora mismo</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Registrarse</ModalHeader>
             <ModalBody>
@@ -46,10 +46,11 @@ class Landing extends Component {
               <Button color="primary" href="/registerTeam">Equipo de esports</Button>
             </ModalFooter>
           </Modal>
+          </div>
         </p>
         <Button color="primary" onClick={this.toggle}>Inicia sesión</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Registrarse</ModalHeader>
+            <ModalHeader toggle={this.toggle}>Iniciar sesión </ModalHeader>
             <ModalBody>
               Iniciar sesión en la plataforma como: 
             </ModalBody>
@@ -62,7 +63,7 @@ class Landing extends Component {
         <Row>
           <Col sm="4">
             <Card icon={<FaUser/>}  title="Los mejores jugadores" text="Revisa sus estadísticas, su información personal 
-            y su disponiblidad" button="Checar"> </Card>
+            y su disponiblidad" button="Checar" link="/profile"> </Card>
           </Col>
           <Col sm="4">
             <Card icon={<FaUsers/>} title="Los mejores equipos" text="Sus logros y sus participantes estarán a la vista de todos." button="Checar"></Card>
@@ -71,6 +72,7 @@ class Landing extends Component {
             <Card icon={<FaBriefcase/>} title="Ofertas de empleo" text="Ya sea para un torneo casual o profesional, podrás encontrar 
             los mejores aliados" button="Próximamente"></Card>
           </Col>
+            <Card title="jfjfjf"></Card>
         </Row>
         <br></br>
         <Row>
