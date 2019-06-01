@@ -58,7 +58,7 @@ class Landing extends Component {
           </Modal>
           </div>
         </p>
-        <Button color="primary" onClick={() => this.openModal('calendar')} >Inicia sesión</Button>
+        <Button color="primary" onClick={() => this.openModal('login')} >Inicia sesión</Button>
           <Modal isOpen={this.state.activeModal === 'login'}>>
             <ModalHeader>Iniciar sesión </ModalHeader>
             <ModalBody>
