@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/esports-client/precache-manifest.b40b67eb6e4a3b03ea96023aa234af82.js"
+  "/esports-client/precache-manifest.77e9565691a62b69d987484d89d6b0df.js"
 );
 
 self.addEventListener('message', (event) => {
