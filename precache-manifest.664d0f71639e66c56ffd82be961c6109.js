@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "586d7fcf200f5493a0810f896bd11f6b",
+    "revision": "286e18b31a3731cd3dde220dc2eeecff",
     "url": "/esports-client/index.html"
   },
   {
-    "revision": "f7ed2292a183482e2449",
+    "revision": "f6439f025f53cc89d03d",
     "url": "/esports-client/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "3d72fb2fc65840b20d6e",
+    "revision": "2abefb4658fc3200991f",
     "url": "/esports-client/static/css/main.a846b277.chunk.css"
   },
   {
-    "revision": "f7ed2292a183482e2449",
-    "url": "/esports-client/static/js/2.272ddaa3.chunk.js"
+    "revision": "f6439f025f53cc89d03d",
+    "url": "/esports-client/static/js/2.55a145a4.chunk.js"
   },
   {
-    "revision": "3d72fb2fc65840b20d6e",
-    "url": "/esports-client/static/js/main.07e93701.chunk.js"
+    "revision": "2abefb4658fc3200991f",
+    "url": "/esports-client/static/js/main.27b6da46.chunk.js"
   },
   {
     "revision": "4616ee232e0a9952bd30",
