@@ -10,13 +10,12 @@ import Login from './views/Login'
 const Routes = () => {
     return (
         <Switch>
-            <Route path ="/" component={Landing} />
-            <Route path ="profile" component={Profile} />
-            <Route path ="/profileTeam" component={ProfileTeam} />
-            <Route path ="/register" component={Register} />
-            <Route path ="/registerTeam" component={RegisterTeam} />
-            <Route path ="/login" component={Login} />
-            
+            <Route path ="/" exact component={Landing} />
+            <Route path ="profile" exact component={Profile} />
+            <Route path ="/profileTeam" exact component={ProfileTeam} />
+            <Route path ="/register" exact component={Register} />
+            <Route path ="/registerTeam" exact component={RegisterTeam} />
+            <Route path ="/login" exact component={Login} />
         </Switch>
     )
 }
