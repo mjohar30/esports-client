@@ -22,18 +22,33 @@ class Landing extends Component {
   //     modalBody: body
   //   });
   //  };
-  constructor () {
-    super();
-    this.state = {open:false}
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.handleModalChangeEnter = this.handleModalChange.bind(this, true);
-    this.handleModalChangeLogin = this.handleModalChange.bind(this, false);
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      dd1: false,
+      modal1: true,
+      modal2: false
+    };
+    this.dropdownToggle = this.dropdownToggle.bind(this);
   }
-  openModal () {
-    this.setState({open: true}); }
-  closeModal () {
-    this.setState({open: false}); }
+  
+  dropdownToggle() {
+    this.setState({
+      dd1: !this.state.dd1
+    });
+  }
+  closeModal(tabId) {
+    this.setState({
+      [tabId]: false
+    });
+  }
+  showModal(modal) {
+    this.setState({
+      [modal]: true
+    });
+    console.log(this.state);
+  }
   render() {
     return (
       <div>
@@ -45,9 +60,9 @@ class Landing extends Component {
         <hr className="my-2" />
         <p>Este es el lugar indicado para ti</p>
         <p className="lead">
-          <div><Button color="primary" onClick={() => this.openModal('register')}>Registrate ahora mismo</Button>
-          <Modal isOpen={this.state.activeModal === 'register'}>>
-            <ModalHeader>Registro</ModalHeader>
+          <div><Button color="primary" onClick={this.showModal.bind(this, 'modal1')}>Registrate ahora mismo</Button>
+          <Modal isOpen={this.state.modal1} toggle={this.closeModal.bind(this, 'modal1')}>
+            <ModalHeader toggle={this.closeModal.bind(this, 'modal1')}>Registro</ModalHeader>
             <ModalBody>
               Registrarse en la plataforma como: 
             </ModalBody>
@@ -58,9 +73,9 @@ class Landing extends Component {
           </Modal>
           </div>
         </p>
-        <Button color="primary" onClick={() => this.openModal('login')} >Inicia sesión</Button>
-          <Modal isOpen={this.state.activeModal === 'login'}>>
-            <ModalHeader>Iniciar sesión </ModalHeader>
+        <Button color="primary" onClick={this.showModal.bind(this, 'modal2')} >Inicia sesión</Button>
+          <Modal isOpen={this.state.modal2} toggle={this.closeModal.bind(this, 'modal2')}>
+            <ModalHeader toggle={this.closeModal.bind(this, 'modal2')}>Iniciar sesión </ModalHeader>
             <ModalBody>
               Iniciar sesión en la plataforma como: 
             </ModalBody>
