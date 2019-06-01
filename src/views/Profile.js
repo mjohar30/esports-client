@@ -3,6 +3,7 @@ import Description from '../components/Description'
 import SocialNetwork from '../components/SocialNetwork';
 import {Row, Col} from 'reactstrap'
 import Achievements from '../components/Achievements'
+import './Profile.css'
 
 class Profile extends Component {
     render() {
@@ -11,6 +12,7 @@ class Profile extends Component {
                 <br/>
                 <br/>
                 <br/>
+                <div className="hola">
                 <Row>
                 <Col sm="8">
                 <Description>
@@ -24,7 +26,7 @@ class Profile extends Component {
                 <h3>Logros</h3>
                 <Achievements></Achievements>
                 <Achievements></Achievements>
-
+                </div>
             </div>
         );
     }
